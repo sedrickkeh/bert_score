@@ -68,7 +68,7 @@ def main():
         return_hash=True,
         rescale_with_baseline=args.rescale_with_baseline,
         baseline_path=args.baseline_path,
-        use_fast_tokenizer=args.use_fast_tokenizer,
+        use_fast_tokenizer=False,
     )
     avg_scores = [s.mean(dim=0) for s in all_preds]
     P = avg_scores[0].cpu().item()
